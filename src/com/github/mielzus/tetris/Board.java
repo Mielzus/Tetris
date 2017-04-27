@@ -166,8 +166,8 @@ public class Board extends JPanel implements ActionListener {
         nextPiece.setRandomShape();
         System.out.println("\nCurrent piece: " + curPiece.getShape() + " " + curPiece);
         System.out.println("Next piece: " + nextPiece.getShape() + " " + nextPiece);
-        sidePanel.displayPiece(curPiece);
-        sidePanel.updateScores(curPiece.getShape());
+        sidePanel.displayPiece(nextPiece);
+        sidePanel.updateScores(nextPiece.getShape());
         curX = BoardWidth / 2 + 1;
         curY = BoardHeight - 1 + curPiece.minY();
 
@@ -337,27 +337,26 @@ public class Board extends JPanel implements ActionListener {
                  return;
 
              switch (keycode) {
-             case KeyEvent.VK_LEFT:
-                 tryMove(curPiece, curX - 1, curY);
-                 break;
-             case KeyEvent.VK_RIGHT:
-                 tryMove(curPiece, curX + 1, curY);
-                 break;
-             case KeyEvent.VK_DOWN:
-                 tryMove(curPiece.rotateRight(), curX, curY);
-                 break;
-             case KeyEvent.VK_UP:
-                 tryMove(curPiece.rotateLeft(), curX, curY);
-                 break;
-             case KeyEvent.VK_SPACE:
-                 dropDown();
-                 break;
-             case 'd':
-             case 'D':
-                 oneLineDown();
-                 break;
+	             case KeyEvent.VK_LEFT:
+	                 tryMove(curPiece, curX - 1, curY);
+	                 break;
+	             case KeyEvent.VK_RIGHT:
+	                 tryMove(curPiece, curX + 1, curY);
+	                 break;
+	             case KeyEvent.VK_DOWN:
+	                 tryMove(curPiece.rotateRight(), curX, curY);
+	                 break;
+	             case KeyEvent.VK_UP:
+	                 tryMove(curPiece.rotateLeft(), curX, curY);
+	                 break;
+	             case KeyEvent.VK_SPACE:
+	                 dropDown();
+	                 break;
+	             case 'd':
+	             case 'D':
+	                 oneLineDown();
+	                 break;
              }
-
          }
      }
 }
