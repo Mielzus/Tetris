@@ -1,7 +1,6 @@
 package com.github.mielzus.tetris;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.BoxLayout;
@@ -9,8 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SideBar extends JPanel {
-    
-    private final int BoardWidth = 5;
+
+	private static final long serialVersionUID = 1L;
+
+	private final int BoardWidth = 5;
     private final int BoardHeight = 22;
 
     private int shapeI = 0;

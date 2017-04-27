@@ -14,8 +14,9 @@ import javax.swing.Timer;
 
 public class Board extends JPanel implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
 
-    final int BoardWidth = 10;
+	final int BoardWidth = 10;
     final int BoardHeight = 22;
 
     Timer timer;

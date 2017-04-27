@@ -9,7 +9,9 @@ import javax.swing.JLabel;
 
 public class Tetris extends JFrame {
 
-    JLabel statusbar;
+	private static final long serialVersionUID = 1L;
+
+	JLabel statusbar;
     SideBar sidepanel;
 
     public Tetris() {
